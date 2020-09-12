@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Piano</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="keyboard.css">
+</head>
+
+<body>
+
+    <!--NAVBAR -->
+    <div class="navigation">
+        <h1 id="optionsBtn">Options</h1>
+    </div>
+
+    <!--OPTIONS MODAL-->
+    <div id="optionsModal" class="optionsModal">
+        <div class="optionsModalContent">
+
+            <span class="closeOptionsModal">X</span>
+            
+            <div class="row justify-content-center">
+                <h1 class="square-color">Square Color</h1>
+            </div>
+            <div class="row justify-content-center color-buttons">
+                <button class="settings-button" id="blueBtn" onclick="changeSquaresBlue(); blueButtonActive();">Blue</button>
+                <button class="settings-button" id="yellowBtn" onclick="changeSquaresYellow(); yellowButtonActive()">Yellow</button>
+                <button class="settings-button" id="redBtn" onclick="changeSquaresRed(); redButtonActive()">Red</button>
+                <button class="settings-button" id="pinkBtn" onclick="changeSquaresPink(); pinkButtonActive()">Pink</button>
+            </div>
+            <div class="row justify-content-center">
+                <h1 class="reset-counter">Counter</h1>
+            </div>
+            <div class="row justify-content-center">
+                <button class="settings-button" id="resetCounterBtn" onclick="resetCounter()">Reset</button>
+                <button class="settings-button" id="hideCounterBtn" onclick="hideCounter(); hideButtonActive()">Hide</button>
+                <button class="settings-button" id="showCounterBtn" onclick="showCounter(); showButtonActive()">Show</button>
+            </div>
+            <div class="row justify-content-center">
+                <h1 class="github">See Code on GitHub</h1>
+            </div>
+            <div class="row justify-content-center">
+                <a class="github" href="https://github.com/jorge-jauregui/jorge-jauregui-javascript-projects-virtual-piano">
+                    <img class="github"src="github.svg" alt="GitHub Icon">                
+                </a>
+            </div>
+
+        </div>
+    </div>
+
+    <!--TITLE-->
+    <h1 id="title">Virtual Piano</h1>
+        
+    <!--SQUARES-->
+    <div id="scene" data-relative-input="true" class="squares">
+        <div class="square square1"></div>
+        <div class="square square2"></div>
+        <div class="square square3"></div>
+        <div class="square square4"></div>
+        <div class="square square5"></div>
+        <div class="square square6"></div>
+        <div class="square square7"></div>
+        <div class="square square8"></div>
+        <div class="square square9"></div>
+    </div>
+   
+    <!--PIANO-->
+    <div id="keyboard"class="keyboard">
+        <div data-note="C" class="key white">
+            <span class="label-letter-white">D</span>
+        </div>
+        <div data-note="Db" class="key black">
+            <span class="label-letter-black">R</span>
+        </div>
+        <div data-note="D" class="key white">
+            <span class="label-letter-white">F</span>
+        </div>
+        <div data-note="Eb" class="key black">
+            <span class="label-letter-black">T</span>
+        </div>
+        <div data-note="E" class="key white">
+            <span class="label-letter-white">G</span>
+        </div>
+        <div data-note="F" class="key white">
+            <span class="label-letter-white">H</span>
+        </div>
+        <div data-note="Gb" class="key black">
+            <span class="label-letter-black">Y</span>
+        </div>
+        <div data-note="G" class="key white">
+            <span class="label-letter-white">J</span>
+        </div>
+        <div data-note="Ab" class="key black">
+            <span class="label-letter-black">U</span>
+        </div>
+        <div data-note="A" class="key white">
+            <span class="label-letter-white">K</span>
+        </div>
+        <div data-note="Bb" class="key black">
+            <span class="label-letter-black">I</span>
+        </div>
+        <div data-note="B" class="key white">
+            <span class="label-letter-white">L</span>
+        </div>
+    </div>
+
+    <!--COUNTER-->
+    <p id="displayCount"></p>
+
+
+    <!--AUDIO FILES -->
+        <!--Audio tags with id's that match the data-notes-->
+    <audio src="notes/C.mp3" id="C"></audio>
+    <audio src="notes/Db.mp3" id="Db"></audio>
+    <audio src="notes/D.mp3" id="D"></audio>
+    <audio src="notes/Eb.mp3" id="Eb"></audio>
+    <audio src="notes/E.mp3" id="E"></audio>
+    <audio src="notes/F.mp3" id="F"></audio>
+    <audio src="notes/Gb.mp3" id="Gb"></audio>
+    <audio src="notes/G.mp3" id="G"></audio>
+    <audio src="notes/Ab.mp3" id="Ab"></audio>
+    <audio src="notes/A.mp3" id="A"></audio>
+    <audio src="notes/Bb.mp3" id="Bb"></audio>
+    <audio src="notes/B.mp3" id="B"></audio>
+
+    <!--SCRIPTS-->
+    <script src="keyboard.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.0/anime.min.js" integrity="sha512-LfB+BcvR3zBt7ebVskhSWiSbEUiG3p5EcCprkieldsKhBeR6wpnLi0VpWC2GNgVGWP2n/skO8Bx2oKNjUhXCkw==" crossorigin="anonymous"></script>
+</body>
+</html>
