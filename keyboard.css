@@ -286,13 +286,4 @@ button.settings-button:focus {
     }
 }
 
-/* ipads */
-@media only screen and (max-width: 1367px) {
-    div.keyboard{
-        bottom: 500px;
-    }
-    div.squares{
-        bottom: 900px;
-    }  
-}
 
