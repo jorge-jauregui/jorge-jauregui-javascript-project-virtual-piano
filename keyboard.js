@@ -1,3 +1,10 @@
+
+// Hide squares on default and display them once playNote() runs
+document.getElementById("square-column").style.display = "none";
+let displaySquares = () => {
+    document.getElementById("square-column").style.display = "block";
+}
+
 /*
 PIANO 
 */
@@ -46,7 +53,7 @@ const playNote = (key) => {
     audio.addEventListener('ended', () => {
         key.classList.remove('active')
     });
-
+    displaySquares();
     playAnimation();
     addToCounter();
 }
@@ -172,12 +179,10 @@ let pinkButtonActive = () => {
 let hideButtonActive = () => {
     let hideCounterBtn = document.getElementById('hideCounterBtn');
     hideCounterBtn.classList.add("hideCounterBtnSelected")
-
     showCounterBtn.classList.remove("showCounterBtnSelected")
 }
 let showButtonActive = () => {
     let showCounterBtn = document.getElementById('showCounterBtn');
     showCounterBtn.classList.add("showCounterBtnSelected")
-
     hideCounterBtn.classList.remove("hideCounterBtnSelected")
 }
