@@ -28,12 +28,12 @@ keys.forEach(key => {
 
 document.addEventListener('keydown', event => {
     if (event.repeat) return;
-    const key = event.key;
-    const blackKeyIndex = blackKeyLetters.indexOf(key);
-    const whiteKeyIndex = whiteKeyLetters.indexOf(key);
+    const pressedKey = event.key; // get key that is pressed
+    const blackKeyIndex = blackKeyLetters.indexOf(pressedKey); // index of key in blackKeyLetters array
+    const whiteKeyIndex = whiteKeyLetters.indexOf(pressedKey); // index of key in whiteKeyLetters array
 
-    if (blackKeyIndex > -1) playNote(blackKeys[blackKeyIndex]);
-    if (whiteKeyIndex > -1) playNote(whiteKeys[whiteKeyIndex]);
+    if (blackKeyIndex > -1) playNote(blackKeys[blackKeyIndex]); // if we have an index, playNote() runs with corresponding audio
+    if (whiteKeyIndex > -1) playNote(whiteKeys[whiteKeyIndex]); 
 
 });
 
