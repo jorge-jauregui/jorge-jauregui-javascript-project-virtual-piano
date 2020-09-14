@@ -26,13 +26,14 @@ keys.forEach(key => {
     key.addEventListener('click', () => playNote(key))
 })
 
+// Event listener grabs key that user presses, finds a matching index and runs playnote()
 document.addEventListener('keydown', event => {
     if (event.repeat) return;
     const pressedKey = event.key; // get key that is pressed
-    const blackKeyIndex = blackKeyLetters.indexOf(pressedKey); // index of key in blackKeyLetters array
-    const whiteKeyIndex = whiteKeyLetters.indexOf(pressedKey); // index of key in whiteKeyLetters array
+    const blackKeyIndex = blackKeyLetters.indexOf(pressedKey);
+    const whiteKeyIndex = whiteKeyLetters.indexOf(pressedKey); 
 
-    if (blackKeyIndex > -1) playNote(blackKeys[blackKeyIndex]); // if we have an index, playNote() runs with corresponding audio
+    if (blackKeyIndex > -1) playNote(blackKeys[blackKeyIndex]); 
     if (whiteKeyIndex > -1) playNote(whiteKeys[whiteKeyIndex]); 
 
 });
