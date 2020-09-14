@@ -1,0 +1,23 @@
+{
+  "name": "virtual-piano",
+  "version": "1.0.0",
+  "description": "",
+  "main": "keyboard.js",
+  "dependencies": {
+    "tone": "^14.7.39"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jorge-jauregui/jorge-jauregui-javascript-project-virtual-piano.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jorge-jauregui/jorge-jauregui-javascript-project-virtual-piano/issues"
+  },
+  "homepage": "https://github.com/jorge-jauregui/jorge-jauregui-javascript-project-virtual-piano#readme"
+}
